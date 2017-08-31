@@ -21,6 +21,8 @@
 		74FF30AE1F577D4B00195F71 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30AD1F577D4B00195F71 /* ProductViewModel.swift */; };
 		74FF30B11F57808300195F71 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30B01F57808300195F71 /* CollectionViewModel.swift */; };
 		74FF30B31F58C15D00195F71 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30B21F58C15D00195F71 /* PersonViewModel.swift */; };
+		74FF30B51F58D44E00195F71 /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30B41F58D44E00195F71 /* GenericCollectionViewCell.swift */; };
+		74FF30B71F58D63300195F71 /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30B61F58D63300195F71 /* ProductViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		74FF30AD1F577D4B00195F71 /* ProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		74FF30B01F57808300195F71 /* CollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		74FF30B21F58C15D00195F71 /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		74FF30B41F58D44E00195F71 /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
+		74FF30B61F58D63300195F71 /* ProductViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				74FF30A21F563C5100195F71 /* Models */,
 				74FF30741F5639C800195F71 /* AppDelegate.swift */,
 				74FF30761F5639C800195F71 /* ViewController.swift */,
+				74FF30B41F58D44E00195F71 /* GenericCollectionViewCell.swift */,
+				74FF30B61F58D63300195F71 /* ProductViewCell.swift */,
 				74FF30781F5639C800195F71 /* Main.storyboard */,
 				74FF307B1F5639C800195F71 /* Assets.xcassets */,
 				74FF307D1F5639C800195F71 /* LaunchScreen.storyboard */,
@@ -315,7 +321,9 @@
 				74FF30B11F57808300195F71 /* CollectionViewModel.swift in Sources */,
 				74FF30771F5639C800195F71 /* ViewController.swift in Sources */,
 				74FF30AC1F577CCA00195F71 /* ViewModel.swift in Sources */,
+				74FF30B51F58D44E00195F71 /* GenericCollectionViewCell.swift in Sources */,
 				74FF30751F5639C800195F71 /* AppDelegate.swift in Sources */,
+				74FF30B71F58D63300195F71 /* ProductViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
