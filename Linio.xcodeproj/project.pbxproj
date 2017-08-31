@@ -14,6 +14,13 @@
 		74FF307F1F5639C800195F71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FF307D1F5639C800195F71 /* LaunchScreen.storyboard */; };
 		74FF308A1F5639C800195F71 /* LinioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30891F5639C800195F71 /* LinioTests.swift */; };
 		74FF30951F5639C800195F71 /* LinioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30941F5639C800195F71 /* LinioUITests.swift */; };
+		74FF30A61F563CC700195F71 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30A51F563CC700195F71 /* Collection.swift */; };
+		74FF30A81F563CD700195F71 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30A71F563CD700195F71 /* Product.swift */; };
+		74FF30AA1F577C9A00195F71 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30A91F577C9A00195F71 /* Person.swift */; };
+		74FF30AC1F577CCA00195F71 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30AB1F577CCA00195F71 /* ViewModel.swift */; };
+		74FF30AE1F577D4B00195F71 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30AD1F577D4B00195F71 /* ProductViewModel.swift */; };
+		74FF30B11F57808300195F71 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30B01F57808300195F71 /* CollectionViewModel.swift */; };
+		74FF30B31F58C15D00195F71 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF30B21F58C15D00195F71 /* PersonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		74FF30901F5639C800195F71 /* LinioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FF30941F5639C800195F71 /* LinioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinioUITests.swift; sourceTree = "<group>"; };
 		74FF30961F5639C800195F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74FF30A51F563CC700195F71 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		74FF30A71F563CD700195F71 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		74FF30A91F577C9A00195F71 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		74FF30AB1F577CCA00195F71 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		74FF30AD1F577D4B00195F71 /* ProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		74FF30B01F57808300195F71 /* CollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		74FF30B21F58C15D00195F71 /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,9 @@
 		74FF30731F5639C800195F71 /* Linio */ = {
 			isa = PBXGroup;
 			children = (
+				74FF30AF1F577D5A00195F71 /* ViewModels */,
+				74FF30A41F563C7F00195F71 /* Cells */,
+				74FF30A21F563C5100195F71 /* Models */,
 				74FF30741F5639C800195F71 /* AppDelegate.swift */,
 				74FF30761F5639C800195F71 /* ViewController.swift */,
 				74FF30781F5639C800195F71 /* Main.storyboard */,
@@ -123,6 +140,34 @@
 				74FF30961F5639C800195F71 /* Info.plist */,
 			);
 			path = LinioUITests;
+			sourceTree = "<group>";
+		};
+		74FF30A21F563C5100195F71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74FF30A51F563CC700195F71 /* Collection.swift */,
+				74FF30A71F563CD700195F71 /* Product.swift */,
+				74FF30A91F577C9A00195F71 /* Person.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		74FF30A41F563C7F00195F71 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		74FF30AF1F577D5A00195F71 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				74FF30AB1F577CCA00195F71 /* ViewModel.swift */,
+				74FF30AD1F577D4B00195F71 /* ProductViewModel.swift */,
+				74FF30B01F57808300195F71 /* CollectionViewModel.swift */,
+				74FF30B21F58C15D00195F71 /* PersonViewModel.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FF30AE1F577D4B00195F71 /* ProductViewModel.swift in Sources */,
+				74FF30AA1F577C9A00195F71 /* Person.swift in Sources */,
+				74FF30A61F563CC700195F71 /* Collection.swift in Sources */,
+				74FF30B31F58C15D00195F71 /* PersonViewModel.swift in Sources */,
+				74FF30A81F563CD700195F71 /* Product.swift in Sources */,
+				74FF30B11F57808300195F71 /* CollectionViewModel.swift in Sources */,
 				74FF30771F5639C800195F71 /* ViewController.swift in Sources */,
+				74FF30AC1F577CCA00195F71 /* ViewModel.swift in Sources */,
 				74FF30751F5639C800195F71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +469,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F3VV4SD4LV;
 				INFOPLIST_FILE = Linio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = siker.space.Linio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,6 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F3VV4SD4LV;
 				INFOPLIST_FILE = Linio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = siker.space.Linio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
