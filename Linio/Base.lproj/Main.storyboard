@@ -124,6 +124,7 @@
                                         </constraints>
                                         <size key="customSize" width="174" height="178"/>
                                         <connections>
+                                            <outlet property="imagesContentView" destination="e1M-Js-KJy" id="mGn-Sb-C3O"/>
                                             <outlet property="principalImage" destination="ZJm-Pg-uNy" id="62g-nF-n14"/>
                                             <outlet property="secondImage" destination="0BE-9e-Sxi" id="scu-4B-XAR"/>
                                             <outlet property="subtitleLabel" destination="VPg-b7-Y7I" id="cvJ-JT-lP8"/>
