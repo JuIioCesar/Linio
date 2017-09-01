@@ -14,8 +14,18 @@ class GenericCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var thirdImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var imagesContentView: UIView!
     
     override func awakeFromNib() {
+        imagesContentView.layer.cornerRadius = 5
+        imagesContentView.clipsToBounds = true
+        principalImage.layer.cornerRadius = 5
+        principalImage.clipsToBounds = true
+        secondImage.layer.cornerRadius = 5
+        secondImage.clipsToBounds = true
+        thirdImage.layer.cornerRadius = 5
+        thirdImage.clipsToBounds = true
+        
     }
     
     func configurateCell(withCollection collection:CollectionProtocol) {

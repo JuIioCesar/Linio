@@ -17,6 +17,8 @@ class ProductViewCell: UICollectionViewCell {
     
     
     override func awakeFromNib() {
+        self.contentView.layer.cornerRadius = 5
+        self.contentView.clipsToBounds = true
     }
     
     func configCell(withProduct product:ProductProtocol) {
