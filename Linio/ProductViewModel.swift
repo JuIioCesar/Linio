@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ProductViewModel: NSObject, ProductProtocol {
     private var product:Product
@@ -32,17 +33,37 @@ class ProductViewModel: NSObject, ProductProtocol {
         }
         return nil
     }
-    var linioPlusLevel: Int {
-        return product.linioPlusLevel
+    var linioPlusLevel: UIImage? {
+        if product.linioPlusLevel == 1 {
+            return #imageLiteral(resourceName: "ndIc30PlusSquare")
+        }else if product.linioPlusLevel == 2 {
+            return #imageLiteral(resourceName: "ndIc30Plus48Square")
+        }else{
+            return nil
+        }
     }
-    var condition: ProductConditionType {
-        return product.condition
+    var condition: UIImage? {
+        if product.condition == .new {
+            return #imageLiteral(resourceName: "ndIc30NewSquare")
+        }else if product.condition == .refurbished {
+            return #imageLiteral(resourceName: "ndIc30RefurbishedSquare")
+        }else{
+            return nil
+        }
     }
-    var freeShipping: Bool {
-        return product.freeShipping
+    var freeShipping: UIImage? {
+        if product.freeShipping {
+            return #imageLiteral(resourceName: "ndIc30FreeShippingSquare")
+        }else{
+            return nil
+        }
     }
-    var imported: Bool {
-        return product.imported
+    var imported: UIImage? {
+        if product.imported{
+            return #imageLiteral(resourceName: "ndIc30InternationalSquare")
+        }else{
+            return nil
+        }
     }
     var active: Bool {
         return product.active

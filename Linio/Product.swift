@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public enum ProductConditionType:String {
     case new = "new"
@@ -21,10 +22,10 @@ protocol ProductProtocol {
     var slug: String {get}
     var url: String {get}
     var imageURL: URL? {get}
-    var linioPlusLevel: Int {get}
-    var condition: ProductConditionType {get}
-    var freeShipping: Bool {get}
-    var imported: Bool {get}
+    var linioPlusLevel: UIImage? {get}
+    var condition: UIImage? {get}
+    var freeShipping: UIImage? {get}
+    var imported: UIImage? {get}
     var active: Bool {get}
 }
 
