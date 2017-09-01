@@ -51,7 +51,7 @@ class ViewModel: NSObject {
                 }
                 return
             }
-            
+            self.collections = []
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
             if let json = responseJSON as? [[String:AnyObject]]{
                 for element in json {

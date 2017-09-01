@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tabBar: UITabBar!
     @IBOutlet weak var collectionView: UICollectionView!
+    var refreshControl = UIRefreshControl()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,13 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         
         setupTabbar()
+        
+        refreshControl.tintColor = .orange
+        refreshControl.addTarget(self, action: #selector(self.refreshItems), for: .valueChanged)
+        
+        if #available(iOS 10.0, *) {
+            collectionView.refreshControl = refreshControl
+        }
         
         model.fetchData(completion: {
             self.collectionView.reloadData()
@@ -37,6 +46,14 @@ class ViewController: UIViewController {
             tabBar.items?[4].setBadgeTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for: .normal)
         }
         tabBar.selectedItem = tabBar.items?[2]
+    }
+    
+    func refreshItems() {
+        model.fetchData(completion: {
+            self.collectionView.reloadData()
+            self.refreshControl.endRefreshing()
+            return ()
+        })
     }
     
 }
