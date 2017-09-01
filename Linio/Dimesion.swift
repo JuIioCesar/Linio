@@ -45,13 +45,13 @@ public enum Dimesion: CGFloat {
     var insets:UIEdgeInsets {
         switch self {
         case .iPhone4:
-            return UIEdgeInsets(top: 50, left: 5, bottom: 50, right: 5)
+            return UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
         case .iPhone47:
-            return UIEdgeInsets(top: 50, left: 10, bottom: 50, right: 10)
+            return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         case .iPhone55:
-            return UIEdgeInsets(top: 50, left: 10, bottom: 50, right: 10)
+            return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         case .none:
-            return UIEdgeInsets(top: 50, left: 10, bottom: 50, right: 10)
+            return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         }
     }
 }
