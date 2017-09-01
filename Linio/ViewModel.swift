@@ -46,7 +46,9 @@ class ViewModel: NSObject {
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else{
                 print(error!.localizedDescription)
-                completion()
+                DispatchQueue.main.async {
+                    completion()
+                }
                 return
             }
             
@@ -57,7 +59,9 @@ class ViewModel: NSObject {
                     self.collections.append(collection)
                 }
             }
-            completion()
+            DispatchQueue.main.async {
+                completion()
+            }
         }
         task.resume()
     }
