@@ -11,13 +11,32 @@ import Foundation
 class ViewModel: NSObject {
     var collections:[CollectionViewModel] = []
     
+    var numberOfProducts: Int {
+        var count:Int = 0
+        for collection in collections {
+            count += collection.products.count
+        }
+        return count
+    }
+    
     override init() {
         super.init()
-        self.fetchData()
     }
     
     
-    func fetchData() {
+    func numberOfItems(inSection section:Int) -> Int {
+        switch section {
+        case 0:
+            return 2
+        case 1:
+            return numberOfProducts
+        default:
+            return 0
+        }
+    }
+    
+    
+    func fetchData(completion:@escaping ()->()?) {
         guard let url = URL(string: "https://gist.githubusercontent.com/la-ursic/3c5f25d5ee955ee9a6e493ac57884b9c/raw/5fab9af8e1f4db60419ba3a8da9f138cbb3a8461/Wish%2520lists") else{
             return
         }
@@ -27,6 +46,7 @@ class ViewModel: NSObject {
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else{
                 print(error!.localizedDescription)
+                completion()
                 return
             }
             
@@ -37,9 +57,17 @@ class ViewModel: NSObject {
                     self.collections.append(collection)
                 }
             }
+            completion()
         }
         task.resume()
-        
+    }
+    
+    func getProductFromAllProducts(withIndex index:Int) -> ProductViewModel {
+        if index < collections[0].products.count {
+            return collections[0].products[index]
+        }else{
+            return collections[1].products[index-collections[0].products.count]
+        }
     }
     
 }
