@@ -39,7 +39,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-WV-eYF">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xgl-WV-eYF">
                                 <rect key="frame" x="0.0" y="67" width="375" height="551"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UI7-th-aCm">
@@ -138,6 +138,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="174" height="174"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jRH-GQ-46Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="174"/>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ndIc24FavOnPink" translatesAutoresizingMaskIntoConstraints="NO" id="GFf-7X-JFp">
                                                     <rect key="frame" x="146" y="12" width="16" height="16"/>
                                                     <constraints>
@@ -155,21 +158,21 @@
                                                                 <constraint firstAttribute="height" constant="30" id="oUM-RI-NST"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iHT-zm-RPu">
+                                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iHT-zm-RPu">
                                                             <rect key="frame" x="0.0" y="30" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Qyz-pL-EFh"/>
                                                                 <constraint firstAttribute="width" constant="30" id="xsJ-He-w2a"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-1y-1pD">
+                                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-1y-1pD">
                                                             <rect key="frame" x="0.0" y="60" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="awE-YH-vPG"/>
                                                                 <constraint firstAttribute="width" constant="30" id="yx7-Za-I3D"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PNP-7P-RBx">
+                                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PNP-7P-RBx">
                                                             <rect key="frame" x="0.0" y="90" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="5bp-tx-7is"/>
@@ -178,9 +181,6 @@
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jRH-GQ-46Q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="174"/>
-                                                </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -196,11 +196,13 @@
                                         </constraints>
                                         <size key="customSize" width="174" height="174"/>
                                         <connections>
-                                            <outlet property="conditionTypeIcon" destination="iHT-zm-RPu" id="eCX-mD-c7O"/>
-                                            <outlet property="importedIcon" destination="fTc-1y-1pD" id="j32-Ff-bhX"/>
-                                            <outlet property="linioPlusIcon" destination="LXd-6Z-yN1" id="g5M-x8-fX7"/>
-                                            <outlet property="productImage" destination="jRH-GQ-46Q" id="XWd-iG-Gtz"/>
-                                            <outlet property="shippingIcon" destination="PNP-7P-RBx" id="Xel-98-XPt"/>
+                                            <outlet property="likeIcon" destination="GFf-7X-JFp" id="NaR-dD-qAe"/>
+                                            <outlet property="productImage" destination="jRH-GQ-46Q" id="DOJ-v5-xvX"/>
+                                            <outlet property="stackView" destination="gzC-Ej-Kc2" id="elm-QQ-KJQ"/>
+                                            <outletCollection property="iconsImages" destination="LXd-6Z-yN1" collectionClass="NSMutableArray" id="rgW-pM-1DD"/>
+                                            <outletCollection property="iconsImages" destination="iHT-zm-RPu" collectionClass="NSMutableArray" id="A8h-dM-YUf"/>
+                                            <outletCollection property="iconsImages" destination="fTc-1y-1pD" collectionClass="NSMutableArray" id="Cio-lt-Oaf"/>
+                                            <outletCollection property="iconsImages" destination="PNP-7P-RBx" collectionClass="NSMutableArray" id="jBO-Mm-kmM"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -208,8 +210,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GK-B6-nXx">
-                                            <rect key="frame" x="28" y="16.5" width="319" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GK-B6-nXx">
+                                            <rect key="frame" x="28" y="25" width="319" height="0.0"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -231,7 +233,7 @@
                                     <tabBarItem title="BUSCAR" image="ndIc32NavSearchOff" selectedImage="ndIc32NavSearchOn" id="Tu0-6q-Qce"/>
                                     <tabBarItem tag="3" title="FAVORITOS" image="ndIc32NavFavoriteOff" selectedImage="ndIc32NavFavoriteOn" id="krY-ZQ-LcM"/>
                                     <tabBarItem title="MI CUENTA" image="ndIc32NavAccountOff" selectedImage="ndIc32NavAccountOn" id="KVo-YH-k8Z"/>
-                                    <tabBarItem title="CARRITO" image="ndIc32NavCartOff" selectedImage="ndIc32NavCartOn" id="X0w-cm-dF7"/>
+                                    <tabBarItem title="CARRITO" image="ndIc32NavCartOff" badgeValue="7" selectedImage="ndIc32NavCartOn" id="X0w-cm-dF7"/>
                                 </items>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="1" green="0.42745098039215684" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -253,6 +255,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="xgl-WV-eYF" id="CNV-Z2-f1a"/>
                         <outlet property="tabBar" destination="c47-gx-90U" id="PUP-QG-Ylm"/>
                     </connections>
                 </viewController>
