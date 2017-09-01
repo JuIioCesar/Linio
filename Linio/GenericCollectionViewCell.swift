@@ -18,6 +18,13 @@ class GenericCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
     }
     
+    func configurateCell(withCollection collection:CollectionProtocol) {
+        NetworkHelper.downloadImage(url: collection.products.first?.imageURL, imageView: principalImage)
+        NetworkHelper.downloadImage(url: collection.products[1].imageURL, imageView: secondImage)
+        NetworkHelper.downloadImage(url: collection.products[2].imageURL, imageView: thirdImage)
+        titleLabel.text = collection.name
+        subtitleLabel.text = "\(collection.products.count)"
+    }
     
     
 }
